@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ball {
+    width: 100px;
+    height: 100px;
+    border: 1px black solid;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#rgb-color {
+    margin: auto;
+    text-align: center;
+    padding-bottom: 50px;
+}
