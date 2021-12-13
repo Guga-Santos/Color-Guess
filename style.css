@@ -15,10 +15,13 @@ body {
 #rgb-color {
   margin: auto;
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 10px;
 }
 
 #answer-container {
   text-align: center;
 }
 
+#score {
+  text-align: center;
+}

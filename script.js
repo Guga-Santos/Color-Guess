@@ -28,13 +28,32 @@ const acerto = document.querySelector('#rgb-color').innerText;
 linhaDeBolas.addEventListener('click', (event) => {
   if (event.target.style.backgroundColor === acerto) {
     document.querySelector('#answer').innerText = 'Acertou!';
+    document.querySelector('#score').innerText = parseInt(document.querySelector('#score').innerText) + 3
   } else {
     document.querySelector('#answer').innerText = 'Errou! Tente novamente!';
+    document.querySelector('#score').innerText = '0'
   }
+
 });
 
+function guardarPLacar() {
+  const placar = document.querySelector('#score').innerText;
+  localStorage.setItem('placar', placar);
+}
 const resetar = document.querySelector('#reset-game');
-
 resetar.addEventListener('click', () => {
+  guardarPLacar()
   window.location.reload();
 });
+
+const placarSalvo = localStorage.getItem('placar');
+if(placarSalvo) {
+  const placarNew = document.querySelector('#score');
+  placarNew.innerText = placarSalvo
+}
+
+
+
+
+
+
